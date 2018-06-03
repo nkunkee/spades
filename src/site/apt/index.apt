@@ -1,0 +1,48 @@
+   ------
+   Spades
+   ------
+   Nathan Kunkee
+   ------
+   June 9, 2013
+
+
+Summary
+
+    This is a quick project to demonstrate my development skills. It is not
+a complete implementation of the game, as most variations in game play
+have not been coded. Most obviously, partner games are not implemented; 
+currently, each plays as an individual. It is also limited to four players, 
+although the changes for a 3 or 5 player game would not be difficult.
+
+Game Play
+
+    Spades is a contract-oriented, trick-taking game. A trick is the result
+of playing one card from each player. A round is then made up of 13 tricks,
+or each of the 4 players plays 13 cards. Winners of each trick are determined
+by the suit lead (the first suit played for that trick), rank, and spades
+as the trump suit. Contract-oriented meansthat once the cards have been dealt, 
+each player announces a bid, or expectation of the number of tricks they 
+expect to take (or win). Points are awarded (or penalized) based on players
+winning at least the number of tricks bid. A game continues until a player
+reaches the overall score for a game, usually 500 points.
+
+Design
+
+    Of the implementation of the game, I split it into two parts 
+architecturally. The game engine consists of Card, Player, SpadesEvent, and 
+SpadesGame. I have tried to build the engine to just manage game play, so 
+that user interaction and presentation are separate. The App is what starts
+game play and is the main information source for players. KeyboardPlayer 
+implements the Player interface by reading and writing to the console 
+keyboard. This enables single-computer, hotseat play if desired. TestPlayer
+is an implmentation of Player that I use in automated testing and as a
+simple computer player. Due to the structure of the game engine, it would
+not be difficult to use this engine but with the application and players
+implemented with Swing or through a web portal.
+
+    At this point, I am not clear on how to test the interactivity of the
+KeyboardPlayer class. 
+
+    At the moment, my shuffling is very poor. It tends to leave the first 
+player (the human) with mostly diamonds while the last player ends up spade
+bound after a few rounds.
