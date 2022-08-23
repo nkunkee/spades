@@ -36,7 +36,7 @@ public class CardTest {
     @Test
     public void sortsInOrder()
     {
-        List sortMe = new ArrayList();
+        List<Card> sortMe = new ArrayList<Card>();
         sortMe.add(new Card(2, Card.SUIT.SPADE));
         sortMe.add(new Card(2, Card.SUIT.HEART));
         sortMe.add(new Card(2, Card.SUIT.DIAMOND));

@@ -52,7 +52,7 @@ public class App implements SpadesEvents
         myApp = new App(System.out, System.in);
         game.addEventListener(myApp);
         
-        List playerScores;
+        List<Integer> playerScores;
         int dealer=0;
         while(!game.isGameOver())
         {
@@ -66,7 +66,7 @@ public class App implements SpadesEvents
                                    + playerScores.get(k));
             }
         }
-        
+        readInput.close();
     }
 
     private PrintStream output;

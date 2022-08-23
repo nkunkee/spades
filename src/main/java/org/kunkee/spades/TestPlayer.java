@@ -51,7 +51,7 @@ public class TestPlayer implements Player
     public Card playCard(Card [] trick, Card.SUIT lead)
     {
         Card selected;
-        TreeSet<Card> available = new TreeSet();
+        TreeSet<Card> available = new TreeSet<Card>();
         for(Card c: myHand)
         {
             if(c.getSuit()==lead)
@@ -77,7 +77,7 @@ public class TestPlayer implements Player
     
     public int tricksBidToWin()
     {
-        TreeSet<Card> available = new TreeSet();
+        TreeSet<Card> available = new TreeSet<Card>();
         for(Card c: myHand)
         {
             if(c.getSuit()==Card.SUIT.SPADE)

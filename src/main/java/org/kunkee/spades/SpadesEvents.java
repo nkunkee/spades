@@ -4,8 +4,6 @@
  */
 package org.kunkee.spades;
 
-import java.util.List;
-
 /**
  * Implement this interface and pass it into the constructor of the SpadesGame
  * in order to be notified when game events transpire.
